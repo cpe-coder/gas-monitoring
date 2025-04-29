@@ -3,7 +3,7 @@ import { Text, View } from "react-native";
 
 const Control = () => {
 	return (
-		<View>
+		<View className="bg-background h-screen w-screen items-center justify-center gap-5">
 			<Text>Control</Text>
 		</View>
 	);
