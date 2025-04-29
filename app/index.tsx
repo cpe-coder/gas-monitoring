@@ -13,11 +13,14 @@ export default function Index() {
 	});
 
 	return (
-		<View className="bg-background h-screen w-screen items-center justify-center gap-5">
-			<Image source={Logo} width={0} height={0} className="w-32 h-32" />
-			<Text className="text-2xl text-primary font-bold text-center">
-				Gas Monitoring
-			</Text>
+		<View className="bg-background flex-1 items-center justify-center gap-8 pb-10">
+			<Image source={Logo} width={0} height={0} className="w-52 h-52" />
+			<View className="flex-row justify-center items-center gap-2">
+				<Text className="text-4xl text-primary font-bold text-center">Gas</Text>
+				<Text className="text-4xl text-secondary font-bold text-center">
+					Monitoring
+				</Text>
+			</View>
 		</View>
 	);
 }

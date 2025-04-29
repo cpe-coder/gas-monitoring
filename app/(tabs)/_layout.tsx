@@ -8,7 +8,7 @@ const TabsLayout = () => {
 				screenOptions={{
 					headerShadowVisible: false,
 					tabBarStyle: {
-						backgroundColor: "#083344",
+						backgroundColor: "#020f0f",
 						borderTopWidth: 0,
 					},
 				}}
@@ -17,7 +17,11 @@ const TabsLayout = () => {
 					name="control"
 					options={{
 						href: null,
-						headerTitle: "Gas Monitoring",
+						headerTitle: "",
+						headerStyle: {
+							backgroundColor: "#020f0f",
+						},
+						headerTintColor: "#0aa9df",
 					}}
 				/>
 			</Tabs>
