@@ -8,8 +8,8 @@ export default function Index() {
 
 	React.useEffect(() => {
 		setTimeout(() => {
-			router.push("/");
-		});
+			router.push("/(tabs)/control");
+		}, 2000);
 	});
 
 	return (
