@@ -65,47 +65,53 @@ const Control = () => {
 	};
 
 	return (
-		<View className="bg-white flex-1 items-center justify-center gap-10">
-			<View className="flex-col gap-5 items-center justify-center mb-14">
+		<View className="bg-white flex-1 justify-start">
+			<View className="flex-col gap-2 items-center justify-center">
 				<Image source={Logo} width={0} height={0} resizeMode="contain" />
 				<Text className="text-4xl text-primary font-bold text-center">
 					Gas Monitoring
 				</Text>
 			</View>
-			<View className="flex-row justify-around items-center px-4 w-full">
-				<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
-					<Text className="text-2xl text-white font-semibold">Weight</Text>
-					<View className="flex-row items-end justify-center gap-2">
-						<Text className="text-4xl text-slate-800 font-bold">{weight}</Text>
-						<Text className="text-base text-slate-700 font-bold">kg.</Text>
+			<View className="flex-1 items-center justify-center gap-10">
+				<View className="flex-row justify-center items-center gap-10 px-4 w-full">
+					<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
+						<Text className="text-2xl text-white font-semibold">Weight</Text>
+						<View className="flex-row items-end justify-center gap-2">
+							<Text className="text-4xl text-slate-800 font-bold">
+								{weight}
+							</Text>
+							<Text className="text-base text-slate-700 font-bold">kg.</Text>
+						</View>
+					</View>
+					<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
+						<Text className="text-2xl text-white font-semibold">Gas</Text>
+						<Text className="text-4xl text-slate-800 font-bold">
+							{gasValue}
+						</Text>
 					</View>
 				</View>
-				<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
-					<Text className="text-2xl text-white font-semibold">Gas</Text>
-					<Text className="text-4xl text-slate-800 font-bold">{gasValue}</Text>
+				<View className="gap-5 justify-center items-center w-full">
+					<Pressable
+						onPress={activeMainBulb}
+						className={` py-3 px-6 w-60 rounded-xl ${
+							isMainBulb ? "bg-primary" : "bg-secondary"
+						}`}
+					>
+						<Text className="text-center font-bold text-xl text-white">
+							Main Bulb
+						</Text>
+					</Pressable>
+					<Pressable
+						onPress={activeReservedBulb}
+						className={` py-3 px-6 w-60 rounded-xl ${
+							isReservedBulb ? "bg-primary" : "bg-secondary"
+						}`}
+					>
+						<Text className="text-center font-bold text-xl text-white">
+							Reserved Bulb
+						</Text>
+					</Pressable>
 				</View>
-			</View>
-			<View className="gap-5">
-				<Pressable
-					onPress={activeMainBulb}
-					className={` py-3 px-6 rounded-xl ${
-						isMainBulb ? "bg-primary" : "bg-secondary"
-					}`}
-				>
-					<Text className="text-center font-bold text-xl text-white">
-						Main Bulb
-					</Text>
-				</Pressable>
-				<Pressable
-					onPress={activeReservedBulb}
-					className={` py-3 px-6 rounded-xl ${
-						isReservedBulb ? "bg-primary" : "bg-secondary"
-					}`}
-				>
-					<Text className="text-center font-bold text-xl text-white">
-						Reserved Bulb
-					</Text>
-				</Pressable>
 			</View>
 		</View>
 	);
