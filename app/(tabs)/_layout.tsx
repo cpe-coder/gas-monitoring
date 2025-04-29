@@ -17,9 +17,9 @@ const TabsLayout = () => {
 					name="control"
 					options={{
 						href: null,
-						headerTitle: "",
+						headerTitle: "Controls",
 						headerStyle: {
-							backgroundColor: "#020f0f",
+							backgroundColor: "white",
 						},
 						headerTintColor: "#0aa9df",
 					}}

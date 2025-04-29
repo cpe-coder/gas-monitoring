@@ -65,19 +65,24 @@ const Control = () => {
 	};
 
 	return (
-		<View className="bg-background flex-1 items-center justify-center gap-5">
-			<Image source={Logo} width={0} height={0} resizeMode="contain" />
-			<Text className="text-4xl mb-12 text-primary font-bold text-center">
-				Gas Monitoring
-			</Text>
+		<View className="bg-white flex-1 items-center justify-center gap-10">
+			<View className="flex-col gap-5 items-center justify-center mb-14">
+				<Image source={Logo} width={0} height={0} resizeMode="contain" />
+				<Text className="text-4xl text-primary font-bold text-center">
+					Gas Monitoring
+				</Text>
+			</View>
 			<View className="flex-row justify-around items-center px-4 w-full">
 				<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
 					<Text className="text-2xl text-white font-semibold">Weight</Text>
-					<Text className="text-4xl text-secondary font-bold">{weight}</Text>
+					<View className="flex-row items-end justify-center gap-2">
+						<Text className="text-4xl text-slate-800 font-bold">{weight}</Text>
+						<Text className="text-base text-slate-700 font-bold">kg.</Text>
+					</View>
 				</View>
 				<View className="bg-primary w-36 h-36 rounded-2xl flex items-center justify-center gap-5">
 					<Text className="text-2xl text-white font-semibold">Gas</Text>
-					<Text className="text-4xl text-secondary font-bold">{gasValue}</Text>
+					<Text className="text-4xl text-slate-800 font-bold">{gasValue}</Text>
 				</View>
 			</View>
 			<View className="gap-5">
