@@ -36,6 +36,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "7e42124a-7024-4146-be8f-b74ace3f8ba5"
+      }
+    },
+    "owner": "cpecoder"
   }
 }
