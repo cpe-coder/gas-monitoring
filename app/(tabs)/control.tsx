@@ -3,6 +3,7 @@ import database from "@/lib/firebase.config";
 import { get, onValue, ref, set } from "firebase/database";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
+const node = require("nodemailer");
 
 const Control = () => {
 	const [mainBulb, setMainBulb] = React.useState(false);
@@ -11,6 +12,7 @@ const Control = () => {
 	const [isReservedBulb, setIsReservedBulb] = React.useState(false);
 	const [weight, setWeight] = React.useState(0);
 	const [gasValue, setGasValue] = React.useState(0);
+	const [isLeaked, setIsLeaked] = React.useState(false);
 
 	React.useEffect(() => {
 		getMainBulbValue();
@@ -62,6 +64,12 @@ const Control = () => {
 		const valueRef = ref(database, "controls/reservedBulb");
 		const value = await get(valueRef);
 		setIsReservedBulb(value.val());
+	};
+
+	const getLeakedValue = async () => {
+		const valueRef = ref(database, "action/isLeaked");
+		const value = await get(valueRef);
+		setIsLeaked(value.val());
 	};
 
 	return (
