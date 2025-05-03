@@ -19,6 +19,7 @@ const Control = () => {
 		getReservedBulbValue();
 		getGasValue();
 		getWeightValue();
+		getLeakedValue();
 	});
 
 	const getGasValue = async () => {
