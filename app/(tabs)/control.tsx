@@ -3,7 +3,6 @@ import database from "@/lib/firebase.config";
 import { get, onValue, ref, set } from "firebase/database";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
-const node = require("nodemailer");
 
 const Control = () => {
 	const [mainBulb, setMainBulb] = React.useState(false);
